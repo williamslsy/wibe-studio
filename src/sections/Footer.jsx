@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import React from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import styled from "styled-components";
+import { motion } from 'framer-motion';
+import React from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import styled from 'styled-components';
 
-import Logo from "../assets/Svgs/star_white_48dp.svg";
+import Logo from '../assets/Svgs/star_white_48dp.svg';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -15,7 +15,6 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-
 
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
@@ -35,7 +34,7 @@ const LogoContainer = styled.div`
   }
 
   h3 {
-    font-family: "Kaushan Script";
+    font-family: 'Kaushan Script';
     font-size: ${(props) => props.theme.fontxxl};
 
     @media (max-width: 48em) {
@@ -117,8 +116,8 @@ const Footer = () => {
     let elem = document.querySelector(id);
     // console.log(elem);
     scroll.scrollTo(elem, {
-      offset: "-100",
-      duration: "2000",
+      offset: '-100',
+      duration: '2000',
       easing: [0.25, 0.0, 0.35, 1.0],
     });
   };
@@ -126,20 +125,13 @@ const Footer = () => {
   return (
     <Section>
       <LogoContainer>
-        <img
-          width="300"
-          height="300"
-          src={Logo}
-          alt="Wibe"
-          data-scroll
-          data-scroll-speed="2"
-        />
+        <img width="300" height="300" src={Logo} alt="Wibe" data-scroll data-scroll-speed="2" />
         <h3 data-scroll data-scroll-speed="-1">
           Wibe Studio
         </h3>
       </LogoContainer>
       <FooterComponent
-        initial={{ y: "-400px" }}
+        initial={{ y: '-400px' }}
         whileInView={{ y: 0 }}
         viewport={{ once: false }}
         transition={{
@@ -147,49 +139,37 @@ const Footer = () => {
         }}
       >
         <ul>
-          <li aria-hidden="true" onClick={() => handleScroll("#home")}>
+          <li aria-hidden="true" onClick={() => handleScroll('#home')}>
             home
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll(".about")}>
+          <li aria-hidden="true" onClick={() => handleScroll('.about')}>
             about
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll("#shop")}>
+          <li aria-hidden="true" onClick={() => handleScroll('#shop')}>
             shop
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll(".new-arrival")}>
+          <li aria-hidden="true" onClick={() => handleScroll('.new-arrival')}>
             new arrival
           </li>
           <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
+            <a href="https://google.com" target={'_blank'} rel="noreferrer">
               look book
             </a>
           </li>
           <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
+            <a href="https://google.com" target={'_blank'} rel="noreferrer">
               reviews
             </a>
           </li>
         </ul>
         <Bottom>
-          <span
-            data-scroll
-            data-scroll-speed="2"
-            data-scroll-direction="horizontal"
-          >
+          <span data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
             &copy; 2022. All Rights Reserved.
           </span>
-          <span
-            data-scroll
-            data-scroll-speed="-2"
-            data-scroll-direction="horizontal"
-          >
-            Made with &hearts; by{" "}
-            <a
-              href="http://devdreaming.com"
-              target={"_blank"}
-              rel="dofollow noreferrer"
-            >
-              CodeBucks
+          <span data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+            Made with &hearts; by{' '}
+            <a href="http://linkedin.com/in/bada-olawale-sylvester" target={'_blank'} rel="dofollow noreferrer">
+              Waliba
             </a>
           </span>
         </Bottom>
